@@ -18,7 +18,9 @@ export class HomePage {
   dataPhotos: ItemPhotos[] = [];
   constructor(private apiService: ApiService) {
     console.log('Constructor');
-    this.getData();
+    setTimeout(() => {
+      this.getData();
+    }, 3000);
   }
 
   ionViewWillEnter() {
@@ -49,6 +51,10 @@ export class HomePage {
       error: (err) => console.log(`Error es ${err}`),
       complete: () => console.log('Completado'),
     });
+  }
+
+  infoPhotoDetail(item: ItemPhotos) {
+    console.log(`Item es :  `, item);
   }
 
   async takePhoto() {

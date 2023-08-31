@@ -1,0 +1,9 @@
+<ion-card *ngFor="let item of dataPhotos" (click)="onTapButton(item)">
+  <img [src]="item.url" alt="">
+  <ion-card-header>
+    <ion-card-title>{{item.title}}</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    {{item.description}}
+  </ion-card-content>
+</ion-card>
