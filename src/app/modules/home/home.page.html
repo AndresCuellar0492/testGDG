@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      WELCOME GDG
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card *ngFor="let item of dataPhotos">
+    <img [src]="item.url" alt="">
+    <ion-card-header>
+      <ion-card-title>{{item.title}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      {{item.description}}
+    </ion-card-content>
+  </ion-card>
+  <!--   <ion-card *ngIf="imageElement">
+    <img alt="Silhouette of mountains" [src]="imageElement" />
+    <ion-card-header>
+      <ion-card-title>Card Title</ion-card-title>
+      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      Here's a small text description for the card content. Nothing more, nothing less.
+    </ion-card-content>
+  </ion-card>
+  <div id="container">
+    <ion-button expand="medium" (click)="takePhoto()">
+      Open Camera
+    </ion-button>
+  </div> -->
+</ion-content>
